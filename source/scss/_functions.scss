@@ -1,0 +1,11 @@
+
+//placed like color:Black($);
+@function Black($val){
+    @return rgba(0,0,0,$val)
+}
+
+//placed like color:White($);
+@function White($val){
+    @return rgba(255,255,255,$val)
+}
+

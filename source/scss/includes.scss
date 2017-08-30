@@ -1,0 +1,38 @@
+//All included SCSS
+
+
+//variables
+@import 'var.scss';
+@import "extends";
+@import "mixin";
+@import "functions";
+
+//UI Elements
+@import "buttons";
+
+
+//Predefined Style classes
+@import "predefined";
+
+//Header styles
+@import "header";
+
+//component Nav
+@import "navigation";
+
+//component search
+@import "search";
+
+//Banner
+@import "banner";
+
+// All components
+@import "all-components";
+
+//Main template styling
+@import "main-style";
+
+//Responsive
+@import "responsive";
+
+

@@ -1,0 +1,43 @@
+//Extends ============== RUPAK JUNG
+
+
+.box-sizing{
+    box-sizing: border-box;
+    webkit-box-sizing: border-box;
+    moz-box-sizing: border-box;
+    ms-box-sizing: border-box;
+}
+
+.flex-box{
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-shrink: 0;
+}
+
+
+.max-w-100{
+    max-width: 100%;
+    width: 100%;
+    flex:0 0 100%;
+    -webkit-flex:0 0 100%;
+}
+
+
+
+.max-w-50{
+    max-width: 100%;
+    width: 100%;
+    flex:0 0 100%;
+    -webkit-flex:0 0 100%;
+}
+
+
+.max-w-33{
+    max-width: 100%;
+    width: 100%;
+    flex:0 0 100%;
+    -webkit-flex:0 0 100%;
+}

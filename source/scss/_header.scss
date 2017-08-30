@@ -1,0 +1,51 @@
+header{
+    @media all and (max-width: 1020px) {
+        padding: 8px;
+        background-color: Black(0.2);
+        height: auto;
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+
+        .jr-site-logo-holder{
+            width:60%;
+        }
+
+        .jr-site-nav-holder{
+            width:40%;
+        }
+    }
+
+    &.jr-site-header{
+        @include transition(0.4s);
+    }
+
+    &.jr-site-header-fixed
+    {
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+        top:0;
+        left:0;
+
+    }
+
+    &.jr-site-header-absolute{
+        position: absolute;
+        width: 100%;
+        top:0;
+        left:0;
+        z-index: 9999;
+
+    }
+
+    &.jr-site-header-sticky{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+    }
+
+
+}

@@ -1,0 +1,382 @@
+//All Componensts===================================================
+//==================================================================
+//==================================================================
+
+//Section Title Heading and paragraph=============
+.jr-section-heading-para{
+    width: 100%;
+    h2{
+
+    }
+    h3{
+
+    }
+    p{
+
+    }
+
+}
+
+//Underline component=============================
+.jr-underline{
+    span{
+        display: inline-block;
+        height: 2px;
+        margin: 15px 0;
+    }
+
+    &.jr-underline-light{
+        span{
+            background-color: $light-grey-color;
+        }
+    }
+
+    &.jr-underline-dark{
+        span{
+            background-color: $dark-grey-color;
+        }
+    }
+
+    &.jr-underline-primary{
+        span{
+            background-color: $primary-color;
+        }
+    }
+
+    &.jr-underline-secondary{
+        span{
+            background-color: $secondary-color;
+        }
+    }
+
+    &.jr-underline-danger{
+        span{
+            background-color: $error-color;
+        }
+    }
+
+    &.jr-underline-opt{
+        span{
+            background-color: $optional-color;
+        }
+    }
+
+    &.jr-underline-alert{
+        span{
+            background-color: $alert-color;
+        }
+    }
+
+    &.jr-underline-success{
+        span{
+            background-color: $success-color;
+        }
+    }
+}
+
+//Simple Box==========
+.jr-simple-content-box{
+
+    h2{
+        font-size: $heading-font-normal;
+    }
+    h3{
+        font-size: $heading-font-small;
+    }
+    h4{
+        font-size: $text-size-normal;
+    }
+    p,
+    a{
+        font-size: $text-size-small;
+        text-decoration: none;
+    }
+
+    a.link-text{
+        color:Black(0.5);
+        @include transition(0.4s);
+        &:hover{
+            color: $dark-grey-color;
+        }
+    }
+
+    &:hover{
+        .jr-icon-holder{
+            background-color: $primary-color;
+            color:White(1);
+        }
+        .jr-icon-holder-no-wrap{
+            background-color: transparent;
+            color:Black(0.4);
+        }
+
+        .jr-icon-holder-line{
+            background-color: transparent;
+            color:$primary-color;
+            border-color: $primary-color;
+        }
+    }
+
+}
+
+//Icon Holder=====================
+.jr-icon-holder{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: Black(0.08);
+    color:Black(0.4);
+    @include transition(0.4s);
+    i{
+        font-size: 40px;
+    }
+
+
+
+    &.jr-icon-holder-line{
+        background-color: transparent;
+        border-style: solid;
+        border-width: 4px;
+        border-color:Black(0.08);
+    }
+
+    &.jr-icon-holder-line-circle{
+        border-radius:50%;
+    }
+
+
+
+
+
+    &.jr-icon-holder-no-wrap{
+        background-color: transparent;
+        width: auto;
+        height: auto;
+
+        i{
+            font-size: 50px;
+        }
+    }
+
+}
+
+//Thumb Image holder==========================
+.jr-img-holder{
+    width:100%;
+    height: 334px;
+    background-color: Black(0.2);
+    @include transition(0.4s);
+    overflow: hidden;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &.jr-img-holder-round{
+        border-radius: 50%;
+    }
+}
+
+
+//popup generic=========================
+.jr-full-screen-popup-bg{
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+    > div{
+        height: 100%;
+    }
+
+    .jr-popup-box{
+        width: auto;
+        min-width: 600px;
+        max-width: 800px;
+        border-radius:4px;
+        box-shadow: Black(0.4) 0 0 14px 0;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .jr-popup-header{
+        background-color: #6b6b6b;
+        line-height: 40px;
+        padding: 10px 20px;
+        color:white;
+        position: relative;
+
+        .close-popup{
+            position: absolute;
+            top:10px;
+            right: 20px;
+            cursor: pointer;
+            i{
+                @include transition(0.4s);
+            }
+            &:hover{
+                i{
+                    color:White(0.4);
+                }
+            }
+        }
+    }
+
+    .jr-popup-body{
+        overflow-y:auto;
+        padding: 20px;
+        background-color: #404040;
+    }
+
+    &.dark-popup{
+        background-color:Black(0.95);
+
+    }
+
+    &.light-popup{
+        background-color: #f0f0f0;
+
+        .jr-popup-header{
+            background-color: white;
+            color:Black(0.6);
+
+            .close-popup:hover i{
+                color:Black(0.8);
+            }
+        }
+
+        .jr-popup-body{
+            background-color: #e3e3e3;
+        }
+    }
+}
+
+//Generic heading paragraph pack
+.heading-para-btn-pack{
+    h4{
+        font-size: $heading-font-x-small;
+        color:Black(0.5);
+    }
+}
+
+
+//Box design ======== layout global
+.card-box-design{
+    box-shadow: Black(0.2) 0 0 8px;
+    border-radius:4px;
+    overflow: hidden;
+
+    .jr-img-holder{
+        width: 100%;
+        max-width: 380px;
+        display: inline-block;
+        height: 280px;
+        margin-bottom: -0.4em;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .box-info{
+        padding: 20px;
+        p,
+        a{
+            font-size: 14px;
+            color:Black(0.6);
+            @include transition(0.4s);
+        }
+
+        a.linked-post-decp{
+            text-decoration: none;
+            color:Black(0.6);
+            display: block;
+        }
+
+        h2,
+        a.linked-title{
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 0px;
+            color:Black(0.8);
+            text-decoration: none;
+            display: block;
+            @include transition(0.4s);
+        }
+
+        a.linked-title{
+            &:hover{
+                color:$secondary-color;
+            }
+        }
+
+
+
+
+
+    }
+}
+
+//post category
+span.category{
+  font-size: 14px;
+  font-weight: 300;
+  color:Black(0.5);
+  display: block;
+}
+
+//Pagination ======================
+.pagination{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    ul{
+        li{
+            display: inline-block;
+            vertical-align: top;
+            a{
+                display: block;
+                height: 40px;
+                padding: 0 15px;
+                border:solid 2px Black(0.2);
+                font-weight: 600;
+                color:black;
+                text-align: center;
+                line-height: 38px;
+                font-size: 14px;
+                @include transition(0.4s);
+
+
+                &:hover,
+                &.active-page{
+                    border-color: $secondary-color;
+                    color:$secondary-color;
+                }
+            }
+        }
+    }
+}
+
+//Image holder ===================
+.jr-site-image-holder{
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+//image paragraph ==================
+.image-n-box{
+  @extend .dis-flex;
+  flex-wrap: nowrap;
+}

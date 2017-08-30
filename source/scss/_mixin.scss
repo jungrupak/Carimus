@@ -1,0 +1,15 @@
+//Code for mixin ============== Jung Rupak
+
+//flex-val
+
+@mixin flex-value($val){
+    flex:$val;
+    -ms-flex:$val;
+}
+
+@mixin transition($val){
+    transition:all $val ease;
+    -ms-transition:all $val ease;
+    -webkit-transition:all $val ease;
+    -moz-transition:all $val ease;
+}

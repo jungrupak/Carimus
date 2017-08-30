@@ -1,0 +1,197 @@
+//Site Buttons
+.jr-btn-wrapper{
+
+}
+
+.jr-btn{
+    height: 50px;
+    line-height: 50px;
+    font-size: $text-size-x-small;
+    text-transform: uppercase;
+    font-weight: 400;
+    color:Black(0.6);
+    padding: 0 45px;
+    text-decoration: none;
+    @include transition(0.4s);
+    display: inline-block;
+    background-color: $light-grey-color;
+    letter-spacing: 3px;
+
+
+    &.jr-btn-line{
+        background-color: transparent;
+        border:solid 2px $light-grey-color;
+        color:$light-grey-color;
+        line-height: 46px;
+        &.btn-small{
+            line-height: 26px;
+        }
+        &:hover{
+            border-color:$light-grey-color;
+            background-color:$light-grey-color;
+            color:White(1);
+        }
+
+        &.white-line{
+            border-color:white;
+            color:white;
+
+            &:hover{
+                background-color: white;
+                color:Black(0.6);
+            }
+        }
+    }
+
+    &.btn-small{
+        height: 30px;
+        line-height: 28px;
+        font-size: $text-size-x-small;
+        padding: 0 20px;
+    }
+
+    &.btn-rounded{
+        border-radius:28px;
+    }
+
+
+    &.jr-btn-primary{
+        background-color: $primary-color;
+        color:White(1);
+
+        &.jr-btn-line{
+            background-color: transparent;
+            border:solid 2px $primary-color;
+            color:$primary-color;
+            &:hover{
+                border-color:$primary-color;
+                background-color: $primary-color;
+                color:White(1);
+            }
+        }
+    }
+
+    &.jr-btn-secondary{
+        background-color: $secondary-color;
+        color:White(1);
+
+        &.jr-btn-line{
+            background-color: transparent;
+            border:solid 2px $secondary-color;
+            color:$secondary-color;
+            &:hover{
+                border-color:$secondary-color;
+                background-color: $secondary-color;
+                color:White(1) !important;
+            }
+        }
+    }
+
+    &.jr-btn-danger{
+        background-color: $error-color;
+        color:White(1);
+        &.jr-btn-line{
+            background-color: transparent;
+            border:solid 2px $error-color;
+            color:$error-color;
+            &:hover{
+                border-color:$error-color;
+                background-color: $error-color;
+                color:White(1);
+            }
+        }
+    }
+
+    &.jr-btn-success{
+        background-color: $success-color;
+        color:White(1);
+        &.jr-btn-line{
+            background-color: transparent;
+            border:solid 2px $success-color;
+            color:$success-color;
+            &:hover{
+                border-color:$success-color;
+                background-color: $success-color;
+                color:White(1);
+            }
+        }
+    }
+
+    &.jr-btn-alert{
+        background-color: $alert-color;
+        color:White(1);
+        &.jr-btn-line{
+            background-color: transparent;
+            border:solid 2px $alert-color;
+            color:$alert-color;
+            &:hover{
+                border-color:$alert-color;
+                background-color: $alert-color;
+                color:White(1);
+            }
+        }
+    }
+
+    &.jr-btn-dark{
+        background-color: $dark-grey-color;
+        color:White(1);
+        &.jr-btn-line{
+            background-color: transparent;
+            border:solid 2px $dark-grey-color;
+            color:$dark-grey-color;
+            &:hover{
+                border-color:$dark-grey-color;
+                background-color: $dark-grey-color;
+                color:White(1);
+            }
+        }
+        &:hover{
+            background-color: $light-grey-color;
+            color:Black(0.6);
+        }
+    }
+
+    &.jr-btn-black{
+        background-color: black;
+        color:White(1);
+        &.jr-btn-line{
+            background-color: transparent;
+            border:solid 2px black;
+            color:black;
+            &:hover{
+                border-color:black;
+                background-color: black;
+                color:White(1);
+            }
+        }
+        &:hover{
+            background-color: $light-grey-color;
+            color:Black(0.6);
+        }
+    }
+
+    &.jr-btn-white{
+        background-color: white;
+        color:Black(1);
+        &.jr-btn-line{
+            background-color: transparent;
+            border:solid 2px white;
+            color:white;
+            &:hover{
+                border-color:white;
+                background-color: white;
+                color:Black(1);
+            }
+        }
+        &:hover{
+            background-color: $light-grey-color;
+            color:Black(0.6);
+        }
+    }
+
+
+    &:hover{
+        background-color: $dark-grey-color;
+        color:White(1);
+    }
+}

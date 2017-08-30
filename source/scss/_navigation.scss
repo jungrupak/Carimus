@@ -1,0 +1,354 @@
+//Navigation Components
+
+.jr-custom-nav {
+    width: 100%;
+
+        .jr-nav-trigger{
+            display: none;
+        }
+
+        ul{
+            > li{
+                position: relative;
+
+                > a{
+                    color:Black(0.6);
+                    display: block;
+                    line-height: 54px;
+                    font-size: 14px;
+                    padding: 0 20px;
+
+                }
+
+
+                &:hover{
+
+                    > .sub-menu{
+                        top: 0;
+                        opacity: 1;
+                        visibility:visible;
+
+                    }
+                }
+            }
+        }
+
+
+}
+
+//nav-style-fill Navigation=================================================================================
+
+.nav-style-fill{
+    ul{
+        > li{
+
+            &:hover,
+            &.state-active{
+               > a{
+                    background-color: $primary-color;
+                    color:White;
+                }
+            }
+
+            &:hover{
+                ul.sub-menu{
+                    top:54px;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+//nav-style-Round Navigation=================================================================================
+
+.nav-style-round{
+    ul{
+        > li{
+
+            a{
+                line-height: 44px;
+                border-radius:28px;
+            }
+            &:hover,
+            &.state-active{
+                > a{
+                    background-color: $primary-color;
+                    color:White;
+                }
+            }
+
+            &:hover{
+                ul.sub-menu{
+                    top:44px;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+//nav-style-Round Navigation=================================================================================
+
+.nav-style-line{
+    ul{
+        > li{
+
+            a{
+                line-height:44px;
+                border:solid 2px transparent;
+                color:Black(0.8);
+            }
+            &:hover,
+            &.state-active{
+
+                > a{
+                    border:solid 2px Black(0.8);
+                    background-color: transparent;
+                    color:Black(0.8);
+                }
+            }
+
+            &:hover{
+                ul.sub-menu{
+                    top:48px;
+                    a{
+                        border:solid 2px transparent;
+                    }
+                }
+            }
+
+            ul{
+                li{
+                    a{
+                        border:solid 2px transparent;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+//nav-style-Round Navigation=================================================================================
+
+.nav-style-underline{
+    ul{
+        > li{
+            margin-left:20px;
+            margin-right:20px;
+
+            a{
+                line-height:44px;
+                color:Black(0.8);
+                padding: 0;
+            }
+
+            &:before{
+                content:'';
+                height: 2px;
+                width:0;
+                background-color:$success-color;
+                position: absolute;
+                left:0;
+                bottom: 0;
+                @include transition(0.4s);
+            }
+
+            &:hover,
+            &.state-active{
+
+                    &:before{
+                        width: 100%;
+                    }
+            }
+
+            &:hover{
+
+                ul.sub-menu{
+                    top:44px;
+                }
+            }
+
+        }
+    }
+}
+
+
+//Submenu================================
+ul.sub-menu{
+    width:208px;
+    position: absolute;
+    top:40px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: white;
+    box-shadow:Black(0.3) 0 0 10px;
+    @include transition(0.4s);
+    z-index: 99;
+
+    li{
+        @extend .float-none;
+        a{
+            font-size: $text-size-x-small;
+            color:Black(0.6);
+            line-height:45px;
+        }
+
+        &:hover{
+
+
+            a{
+                color:Black(0.8);
+                background-color: Black(0.06);
+            }
+        }
+    }
+
+}
+
+//Full Screen Navigation ==============================
+
+.jr-nav-trigger{
+    cursor: pointer;
+    width: 40px;
+    span{
+        height: 3px;
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: Black(0.8);
+        display: block;
+    }
+}
+
+.full-page-nav{
+    ul{
+        li{
+            opacity: 0;
+            visibility: hidden;
+            transform:translate(-100%);
+            @include transition(0.4s);
+            list-style: none;
+            padding: 10px 25px;
+
+            a{
+                font-size: 28px;
+                color:White(0.4);
+                font-weight: 200;
+                @extend .basic-transition;
+            }
+
+            &:hover,
+            &.state-active{
+                a{
+                    color:White(0.8);
+                }
+            }
+        }
+    }
+}
+
+.menu-item-show{
+
+    .full-page-nav{
+        ul{
+            li{
+                opacity: 1;
+                visibility: visible;
+                transform:translate(0);
+
+            }
+        }
+    }
+
+}
+
+
+//============================================================= Nav on Mobile
+.jr-custom-nav {
+    @media all and (max-width:1023px){
+        ul {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            height: 100%;
+            padding: 40px 25px;
+            overflow-y: auto;
+            background-color: #ebebeb;
+            @include transition(0.4s);
+            color:White;
+
+            &.show-nav{
+                left:0;
+            }
+
+
+            li{
+                display: block;
+                width: 100%;
+                text-align: left;
+                &:before{
+                    height: 1px;
+                }
+                ul{
+                    position: static;
+                    opacity: 1;
+                    visibility: visible;
+                    padding: 0;
+                    width: 100%;
+                    background-color: transparent;
+                    box-shadow: none;
+                }
+            }
+
+        }
+
+        .jr-nav-trigger,
+        .jr-search-compo {
+            float: right;
+            padding: 0 !important;
+            margin: 0 10px;
+            span {
+                margin-bottom: 6px;
+                height: 3px;
+            }
+        }
+
+        .jr-nav-trigger {
+            width: 30px;
+            margin-top: 12px;
+            display: block;
+            span{
+                @include transition(0.4s);
+            }
+        }
+
+        .close-nav{
+
+            span{
+                &:first-child{
+                    transform: rotate(-45deg);
+                    margin-top:14px;
+                }
+                &:nth-child(2){
+                    opacity:0;
+                    visibility: 0;
+                }
+                &:last-child{
+                    transform: rotate(45deg);
+                    margin-top:-18px;
+                }
+            }
+
+        }
+
+    }
+}
+

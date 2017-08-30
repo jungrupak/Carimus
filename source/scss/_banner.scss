@@ -1,0 +1,23 @@
+//banner
+
+.jr-site-main-banner{
+    background-color: Black(0.8);
+    color:White(0.6);
+    &.jr-static-banner{
+        background:{
+            size:cover;
+            position: center;
+            repeat: no-repeat;
+        }
+        height: 100%;
+    }
+
+    &.jr-site-inner-banner{
+        background:{
+            size:cover;
+            position: center;
+            repeat: no-repeat;
+        }
+        height: 658px;
+    }
+}
